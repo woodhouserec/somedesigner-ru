@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# Igor Bogdanov — UI/UX Designer Portfolio
 
-This contains everything you need to run your app locally.
+High-end, minimalist portfolio website. Built with React + Vite.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1aYgiVD8mulQXkdx8JFOcR30rICasl7T2
+## 🚀 Настройка автоматического деплоя (Vercel + GitHub)
 
-## Run Locally
+Чтобы сайт обновлялся сам при каждом `git push`, следуйте этой инструкции:
 
-**Prerequisites:**  Node.js
+### Шаг 1: Подготовка GitHub
+1. Убедитесь, что ваш код запушен в репозиторий:
+   ```bash
+   git add .
+   git commit -m "Build: ready for deployment"
+   git push origin main
+   ```
 
+### Шаг 2: Подключение к Vercel
+1. Зайдите на [vercel.com](https://vercel.com) и войдите через GitHub.
+2. Нажмите кнопку **"Add New"** -> **"Project"**.
+3. В списке репозиториев найдите ваш проект и нажмите **"Import"**.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Шаг 3: Конфигурация сборки
+Vercel автоматически определит Vite, но проверьте эти параметры в разделе **Build & Development Settings**:
+- **Framework Preset:** `Vite`
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Install Command:** `npm install`
+
+### Шаг 4: Готово!
+1. Нажмите **"Deploy"**.
+2. Теперь любой новый коммит в ветку `main` будет автоматически запускать новую сборку и обновлять ваш сайт по выданному адресу.
+
+## 🛠 Технологии
+- **React 19** (Modern UI)
+- **Tailwind CSS** (Styling)
+- **Vite** (Fast Bundling)
+- **Framer-style Animations** (Custom CSS)
